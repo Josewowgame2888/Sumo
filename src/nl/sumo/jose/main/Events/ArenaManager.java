@@ -23,7 +23,6 @@ import cn.nukkit.network.protocol.DataPacket;
 import cn.nukkit.network.protocol.MoveEntityAbsolutePacket;
 import cn.nukkit.utils.Config;
 import java.io.File;
-import nl.sumo.jose.main.Boss;
 import nl.sumo.jose.main.Entity.SumoEntity;
 import nl.sumo.jose.main.Sumo;
 
@@ -141,7 +140,6 @@ implements Listener {
             player.setGamemode(2);
             player.getInventory().clearAll();
             player.getInventory().setItem(1, new Item(345, Integer.valueOf(0), 1).setCustomName("\u00a7cGadgets"));
-            Boss.removeBossBar(player, arena.getInt("id"));
             player.setImmobile(false);
         }
     }

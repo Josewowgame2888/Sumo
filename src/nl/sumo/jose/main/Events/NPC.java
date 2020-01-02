@@ -20,6 +20,7 @@ implements Listener {
     @EventHandler
     public void onHit(EntityDamageByEntityEvent event) {
         if (event.getEntity() instanceof SumoEntity) {
+            event.setCancelled(true);
             Player player = (Player)event.getDamager();
             if (this.sumo.countArchivos() == 0) {
                 player.sendMessage(String.valueOf(Arena.title) + "No hay arenas configuradas");

@@ -11,7 +11,6 @@ import cn.nukkit.level.Position;
 import cn.nukkit.utils.Config;
 import java.io.File;
 import nl.sumo.jose.main.Arena;
-import nl.sumo.jose.main.Boss;
 import nl.sumo.jose.main.Sumo;
 
 public class Comandos
@@ -45,7 +44,6 @@ implements Listener {
                     player.setGamemode(2);
                     player.getInventory().clearAll();
                     player.setImmobile(false);
-                    Boss.removeBossBar(player, arena.getInt("id"));
                     player.sendMessage(String.valueOf(Arena.title) + "Has dejado el combate");
                 } else {
                     this.sumo.getMessagePlayerError(event.getPlayer());
@@ -66,7 +64,6 @@ implements Listener {
                     player.setGamemode(2);
                     player.getInventory().clearAll();
                     player.setImmobile(false);
-                    Boss.removeBossBar(player, arena.getInt("id"));
                     player.sendMessage(String.valueOf(Arena.title) + "Has dejado el combate");
                 } else {
                     this.sumo.getMessagePlayerError(event.getPlayer());
